@@ -30,13 +30,39 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain how to build stateful class components.
 
+Use class before the name of component and extend it to the React.Component. Will also need a constructor and super since you are using extend. Will then use this.state to set your state and will also use render() before your return to render your project to the screen
+
 2. Describe the different phases of the component lifecycle.
+
+Birth/Mounting Phase: When the component is being build out from the ground up. Whatever initial data that you want access to will be defined on the constructor of this phase.
+
+Growth/Updating Phase: This is where you will update component data
+
+Death/Un-mounting Phase: Include removing the component from the screen
 
 3. Demonstrate an understanding of class component lifecycle methods.
 
+constructor: used for initializing local state by assigning an object to this.state and binding event handler methods to an instance
+
+render: this is used to tell React to return some piece of DOM. The React virtual DOM will then handle the steps to mount those DOM pieces
+
+componentDidMount: part of the mounting phase. When component has mounted, we have to render something to the screen. inside this method, we call setState which forces a re-render of the component.
+
+componentWillUnmount: it is called and can be used for any clean up that needs to be done
+
+shouldComponentUpdate: could be used in the updating phase to stop a component from calling render if necessary
+
+componentDidUpdate: this is used during the updating phase and is used to update your state every time the component updates
+
 4. Define stateful logic.
 
+Any code that uses state, but in the case of hooks, it is a behavior created with the use of one or more hooks. 
+
 5. Describe how to test a React component with React Testing Library.
+
+Will use the arrange, act and assert framework. First you need to 'arrange' the test by setting up the code so it can be tested. Then you need to 'act' which is calling a method or a function that returns a result of interest to our test. Then you will assert if our expected return matched the actual return
+
+You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
